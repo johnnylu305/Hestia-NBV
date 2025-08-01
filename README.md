@@ -69,6 +69,11 @@ conda activate isaaclab2.1
 # if any package such as open3d is missing, you can try:
 ./isaaclab.sh -p -m pip install [missing package]
 
+# depending on your GPU and cuda version you may need to:
+pip list | grep -i cuda
+pip uninstall -y nvidia-cuda-cupti-cu11 nvidia-cuda-nvrtc-cu11 nvidia-cuda-runtime-cu11
+./isaaclab.sh -p -m pip install --upgrade --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu129
+
 # validate IsaacLab
 ./isaaclab.sh -p scripts/reinforcement_learning/sb3/train.py --task=Isaac-Cartpole-Direct-v0
 ```
