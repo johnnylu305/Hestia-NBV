@@ -1,123 +1,193 @@
-![Isaac Lab](docs/source/_static/isaaclab.jpg)
-
 ---
+<div align="center">
 
-# Isaac Lab
+# <b>Hestia</b>: Hierarchical Next-Best-View Exploration for Systematic Intelligent Autonomous Data Collection
 
-[![IsaacSim](https://img.shields.io/badge/IsaacSim-4.5.0-silver.svg)](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html)
-[![Python](https://img.shields.io/badge/python-3.10-blue.svg)](https://docs.python.org/3/whatsnew/3.10.html)
-[![Linux platform](https://img.shields.io/badge/platform-linux--64-orange.svg)](https://releases.ubuntu.com/20.04/)
-[![Windows platform](https://img.shields.io/badge/platform-windows--64-orange.svg)](https://www.microsoft.com/en-us/)
-[![pre-commit](https://img.shields.io/github/actions/workflow/status/isaac-sim/IsaacLab/pre-commit.yaml?logo=pre-commit&logoColor=white&label=pre-commit&color=brightgreen)](https://github.com/isaac-sim/IsaacLab/actions/workflows/pre-commit.yaml)
-[![docs status](https://img.shields.io/github/actions/workflow/status/isaac-sim/IsaacLab/docs.yaml?label=docs&color=brightgreen)](https://github.com/isaac-sim/IsaacLab/actions/workflows/docs.yaml)
-[![License](https://img.shields.io/badge/license-BSD--3-yellow.svg)](https://opensource.org/licenses/BSD-3-Clause)
-[![License](https://img.shields.io/badge/license-Apache--2.0-yellow.svg)](https://opensource.org/license/apache-2-0)
+Cheng-You Lu<sup>1</sup>, Zhuoli Zhuang<sup>1</sup>, Nguyen Thanh<sup>1</sup>, Trung Le<sup>1</sup>, Da Xiao<sup>1</sup>, Yu-Cheng Chang<sup>1</sup>, Thomas Do<sup>1</sup>, Srinath Sridhar<sup>2</sup>, Chin-Teng Lin<sup>1</sup>
 
+<p><sup>1</sup>University of Technology Sydney &nbsp;&nbsp;<sup>2</sup>Brown University &nbsp;&nbsp;
 
-**Isaac Lab** is a GPU-accelerated, open-source framework designed to unify and simplify robotics research workflows, such as reinforcement learning, imitation learning, and motion planning. Built on [NVIDIA Isaac Sim](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html), it combines fast and accurate physics and sensor simulation, making it an ideal choice for sim-to-real transfer in robotics.
+### [Projectpage](TBD) · [Paper](TBD) · [Video](TBD)
 
-Isaac Lab provides developers with a range of essential features for accurate sensor simulation, such as RTX-based cameras, LIDAR, or contact sensors. The framework's GPU acceleration enables users to run complex simulations and computations faster, which is key for iterative processes like reinforcement learning and data-intensive tasks. Moreover, Isaac Lab can run locally or be distributed across the cloud, offering flexibility for large-scale deployments.
+</div>
 
+## Introduction
 
-## Key Features
+We propose <b>Hestia</b>, a generalizable RL-based next-best-view planner that actively predicts viewpoints for data capture in 3D reconstruction tasks.
 
-Isaac Lab offers a comprehensive set of tools and environments designed to facilitate robot learning:
-- **Robots**: A diverse collection of robots, from manipulators, quadrupeds, to humanoids, with 16 commonly available models.
-- **Environments**: Ready-to-train implementations of more than 30 environments, which can be trained with popular reinforcement learning frameworks such as RSL RL, SKRL, RL Games, or Stable Baselines. We also support multi-agent reinforcement learning.
-- **Physics**: Rigid bodies, articulated systems, deformable objects
-- **Sensors**: RGB/depth/segmentation cameras, camera annotations, IMU, contact sensors, ray casters.
+Video TBD
 
+## Codebase
 
-## Getting Started
+The codebase contains the training and testing code for Hestia in a simulation environment. The codebase is based on the NVIDIA IsaacLab 2.1 (July 12, 2025) repository. Please follow the [IsaacLab installation guide](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html
+) to install IsaacSim 4.5.0 and clone this repository as the IsaacLab repository. You can also follow our old-school steps to set up the codebase environment.
 
-Our [documentation page](https://isaac-sim.github.io/IsaacLab) provides everything you need to get started, including detailed tutorials and step-by-step guides. Follow these links to learn more about:
+## Environment
 
-- [Installation steps](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html#local-installation)
-- [Reinforcement learning](https://isaac-sim.github.io/IsaacLab/main/source/overview/reinforcement-learning/rl_existing_scripts.html)
-- [Tutorials](https://isaac-sim.github.io/IsaacLab/main/source/tutorials/index.html)
-- [Available environments](https://isaac-sim.github.io/IsaacLab/main/source/overview/environments.html)
+The original Hestia codebase was built on IsaacLab 4.2.0. Due to significant updates to IsaacLab since then, we have upgraded it to IsaacLab 2.1 and IsaacSim 4.5.0, using an environment with Ubuntu 22.04, Python 3.10, and an NVIDIA RTX A6000 GPU.
 
+### Install IsaacSim
 
-## Isaac Sim Version Dependency
-
-Isaac Lab is built on top of Isaac Sim and requires specific versions of Isaac Sim that are compatible with each release of Isaac Lab.
-Below, we outline the recent Isaac Lab releases and GitHub branches and their corresponding dependency versions for Isaac Sim.
-
-| Isaac Lab Version             | Isaac Sim Version |
-| ----------------------------- | ----------------- |
-| `main` branch                 | Isaac Sim 4.5     |
-| `v2.1.0`                      | Isaac Sim 4.5     |
-| `v2.0.2`                      | Isaac Sim 4.5     |
-| `v2.0.1`                      | Isaac Sim 4.5     |
-| `v2.0.0`                      | Isaac Sim 4.5     |
-| `feature/isaacsim_5_0` branch | Isaac Sim 5.0     |
-
-Note that the `feature/isaacsim_5_0` will contain active updates and may contain some breaking changes
-until the official Isaac Lab 2.2 release.
-It currently requires the [Isaac Sim 5.0 branch](https://github.com/isaac-sim/IsaacSim) available on GitHub built from source.
-Please refer to the README in the `feature/isaacsim_5_0` branch for instructions for using Isaac Lab with Isaac Sim 5.0.
-We are actively working on introducing backwards compatibility support for Isaac Sim 4.5 for this branch.
-
-
-## Contributing to Isaac Lab
-
-We wholeheartedly welcome contributions from the community to make this framework mature and useful for everyone.
-These may happen as bug reports, feature requests, or code contributions. For details, please check our
-[contribution guidelines](https://isaac-sim.github.io/IsaacLab/main/source/refs/contributing.html).
-
-## Show & Tell: Share Your Inspiration
-
-We encourage you to utilize our [Show & Tell](https://github.com/isaac-sim/IsaacLab/discussions/categories/show-and-tell) area in the
-`Discussions` section of this repository. This space is designed for you to:
-
-* Share the tutorials you've created
-* Showcase your learning content
-* Present exciting projects you've developed
-
-By sharing your work, you'll inspire others and contribute to the collective knowledge
-of our community. Your contributions can spark new ideas and collaborations, fostering
-innovation in robotics and simulation.
-
-## Troubleshooting
-
-Please see the [troubleshooting](https://isaac-sim.github.io/IsaacLab/main/source/refs/troubleshooting.html) section for
-common fixes or [submit an issue](https://github.com/isaac-sim/IsaacLab/issues).
-
-For issues related to Isaac Sim, we recommend checking its [documentation](https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/overview.html)
-or opening a question on its [forums](https://forums.developer.nvidia.com/c/agx-autonomous-machines/isaac/67).
-
-## Support
-
-* Please use GitHub [Discussions](https://github.com/isaac-sim/IsaacLab/discussions) for discussing ideas, asking questions, and requests for new features.
-* Github [Issues](https://github.com/isaac-sim/IsaacLab/issues) should only be used to track executable pieces of work with a definite scope and a clear deliverable. These can be fixing bugs, documentation issues, new features, or general updates.
-
-## Connect with the NVIDIA Omniverse Community
-
-Do you have a project or resource you'd like to share more widely? We'd love to hear from you!
-Reach out to the NVIDIA Omniverse Community team at OmniverseCommunity@nvidia.com to explore opportunities
-to spotlight your work.
-
-You can also join the conversation on the [Omniverse Discord](https://discord.com/invite/nvidiaomniverse) to
-connect with other developers, share your projects, and help grow a vibrant, collaborative ecosystem
-where creativity and technology intersect. Your contributions can make a meaningful impact on the Isaac Lab community and beyond!
-
-## License
-
-The Isaac Lab framework is released under [BSD-3 License](LICENSE). The `isaaclab_mimic` extension and its corresponding standalone scripts are released under [Apache 2.0](LICENSE-mimic). The license files of its dependencies and assets are present in the [`docs/licenses`](docs/licenses) directory.
-
-## Acknowledgement
-
-Isaac Lab development initiated from the [Orbit](https://isaac-orbit.github.io/) framework. We would appreciate if you would cite it in academic publications as well:
+We will install IsaacSim and IsaacLab using Singularity (a container platform). Please install [Singularity](https://docs.sylabs.io/guides/3.0/user-guide/installation.html
+) first. This is the old-school method, and we recommend following the new [installation guide](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html) instead, as it should be more convenient. If you choose to follow our method, please also obtain a token from [NVIDIA](org.ngc.nvidia.com/setup/api-keys) for IsaacSim Docker file authentication.
 
 ```
-@article{mittal2023orbit,
-   author={Mittal, Mayank and Yu, Calvin and Yu, Qinxi and Liu, Jingzhou and Rudin, Nikita and Hoeller, David and Yuan, Jia Lin and Singh, Ritvik and Guo, Yunrong and Mazhar, Hammad and Mandlekar, Ajay and Babich, Buck and State, Gavriel and Hutter, Marco and Garg, Animesh},
-   journal={IEEE Robotics and Automation Letters},
-   title={Orbit: A Unified Simulation Framework for Interactive Robot Learning Environments},
-   year={2023},
-   volume={8},
-   number={6},
-   pages={3740-3747},
-   doi={10.1109/LRA.2023.3270034}
-}
+# authentication
+export SINGULARITY_DOCKER_USERNAME='$oauthtoken'
+export SINGULARITY_DOCKER_PASSWORD=[Token]
+
+# build IsaacSim
+# ex: singularity build --sandbox isaac-sim-4.5.0/ docker://nvcr.io/nvidia/isaac-sim:4.5.0
+singularity build --sandbox [container_name] [docker_link]
+
+# validate IsaacSim
+cd [container_name]/isaac-sim/
+./isaac-sim.sh
+```
+
+### Install IsaacLab
+```
+# clone repo
+cd [container_name]/home/
+git clone https://github.com/johnnylu305/Hestia-NBV.git
+cd Hestia-NBV/
+
+# link IsaacSim
+ln -s ../../isaac-sim/ _isaac_sim
+
+# environment variables (optional?)
+export ISAACSIM_PATH="${HOME}/isaacsim"
+export ISAACSIM_PYTHON_EXE="${ISAACSIM_PATH}/python.sh"
+
+# conda environment
+./isaaclab.sh --conda isaaclab2.1
+conda activate isaaclab2.1
+
+# install packages
+./isaaclab.sh --install
+
+# if any package is missing, you can try:
+./isaaclab.sh -p -m pip install [missing package]
+
+# validate IsaacLab
+./isaaclab.sh -p scripts/reinforcement_learning/sb3/train.py --task=Isaac-Cartpole-Direct-v0
+```
+
+## Training
+We assume the dataset is stored under "/home/dsr/Documents/mad3d/New_Dataset20/". Please update this path in both the codebase and command line to match your local setup. If you encounter errors such as "Failed to create change watch", rebooting the system usually resolves the issue.
+
+### Training Dataset (from scratch)
+```
+# download dataset (please update BASE_PATH)
+./isaaclab.sh -p scripts/mad3d/download_objaverse.py
+# or download the dataset [here](TBD)
+
+# increase the VMA limit if necessary
+sudo sysctl -w vm.max_map_count=524288
+# glb to usd and occ
+./isaaclab.sh -p scripts/mad3d/convert_mesh_to_usd_occ.py /home/dsr/Documents/mad3d/New_Dataset20/objaverse/hf-objaverse-v1/glbs/ /home/dsr/Documents/mad3d/New_Dataset20/objaverse/preprocess/
+
+# remove invalid 3D model
+./isaaclab.sh -p scripts/mad3d/remove_incomplete_data.py --root_directory /home/dsr/Documents/mad3d/New_Dataset20/objaverse/preprocess/ --mode objaverse
+
+# preprocess occ
+./isaaclab.sh -p scripts/mad3d/preprocess_occ.py /home/dsr/Documents/mad3d/New_Dataset20/objaverse/preprocess/
+
+# select n shapes for train and m shapes for test
+./isaaclab.sh -p scripts/mad3d/select_shapes.py --root_path /home/dsr/Documents/mad3d/New_Dataset20/objaverse/preprocess/ --num_shapes 30100 --train_size 30000 --test_size 100
+```
+
+### Hestia Training
+```
+# increase the VMA limit if necessary
+sudo sysctl -w vm.max_map_count=1048576
+
+# train model
+# since we remove and load a new scene for each episode, you may encounter errors such as "PhysX error: PxRigidActor::detachShape", which can be ignored...
+./isaaclab.sh -p scripts/mad3d/sb3_single_drone.py --task=MAD3D-v0 --enable_cameras --num_envs 256
+```
+
+## Testing
+
+### Ground Truth Point Clouds
+```
+# generate raw pcd
+# ex: ./isaaclab.sh -p scripts/mad3d/convert_mesh_to_pcd.py --filter_input /home/dsr/Documents/mad3d/New_Dataset20/objaverse/preprocess/test.txt /home/dsr/Documents/mad3d/New_Dataset20/objaverse/hf-objaverse-v1/glbs/ /home/dsr/Documents/mad3d/New_Dataset20/objaverse/PCD/
+ ./isaaclab.sh -p scripts/mad3d/convert_mesh_to_pcd.py --filter_input [path_to_dataset_txt] [path_to_raw_mesh] [output_path]
+
+# remove occluded points
+# ex: ./isaaclab.sh -p scripts/mad3d/remove_non_visible_pcd.py --pointcloud /home/dsr/Documents/mad3d/New_Dataset20/objaverse/PCD/ --occ /home/dsr/Documents/mad3d/New_Dataset20/objaverse/preprocess/ --output /home/dsr/Documents/mad3d/New_Dataset20/objaverse/PCD_RF/  --mode objaverse
+./isaaclab.sh -p scripts/mad3d/remove_non_visible_pcd.py --pointcloud [raw_pcd_path] --occ [hollow_occ_path] --output [save_folder_path]   --mode [dataset]
+```
+
+### Hestia Testing
+```
+# test Hestia on the dataset's test split using a specific object position and model checkpoint
+# results are stored under "logs/sb3/MAD3D-v0/model/"
+# ex: ./isaaclab.sh -p scripts/mad3d/sb3_inference.py --input /home/dsr/Documents/mad3d/New_Dataset20/objaverse/preprocess/test.txt --task=MAD3D-v0 --checkpoint logs/sb3/MAD3D-v0/model/model_4352000_steps.zip --trans 0 0 0  --enable_camera
+./isaaclab.sh -p scripts/mad3d/sb3_inference.py --input [path_to_ext_file] --task=[task] --checkpoint [path_to_checkpoint] --trans [object position]  --enable_camera
+```
+
+## More datasets for testing
+
+### Houses3K (from scratch)
+```
+# download raw houses3k data here (https://github.com/darylperalta/Houses3K)
+# or here (TBD)
+# fbx to glb
+python3 scripts/mad3d/fbx_to_glb.py --root /home/dsr/Documents/mad3d/New_Dataset20/houses3k/Raw_FBX/ --output /home/dsr/Documents/mad3d/New_Dataset20/houses3k/Raw_GLB/
+
+# glb to usd and occ
+./isaaclab.sh -p scripts/mad3d/convert_mesh_to_usd_occ.py /home/dsr/Documents/mad3d/New_Dataset20/houses3k/Raw_GLB/ /home/dsr/Documents/mad3d/New_Dataset20/houses3k/preprocess/
+
+# remove invalid 3D model
+./isaaclab.sh -p scripts/mad3d/remove_incomplete_data.py --root_directory /home/dsr/Documents/mad3d/New_Dataset20/houses3k/preprocess/ --mode houses3k
+
+# preprocess occ
+./isaaclab.sh -p scripts/mad3d/preprocess_occ.py /home/dsr/Documents/mad3d/New_Dataset20/houses3k/preprocess/
+
+# run circular path
+./isaaclab.sh -p scripts/mad3d/occ_from_circular_path.py --input /home/dsr/Documents/mad3d/New_Dataset20/houses3k/preprocess/ --vis --enable_cameras
+
+# select n shapes for train and m shapes for test
+./isaaclab.sh -p scripts/mad3d/select_shapes.py --root_path /home/dsr/Documents/mad3d/New_Dataset/houses3k/preprocess/ --num_shapes 356 --train_size 256 --test_size 100
+
+# verification
+# the score is usually 0.99
+./isaaclab.sh -p scripts/mad3d/compare_hollow_to_circular.py --root /home/dsr/Documents/mad3d/New_Dataset/houses3k/preprocess/
+
+# generate raw pcd
+# ex: ./isaaclab.sh -p scripts/mad3d/convert_mesh_to_pcd.py --filter_input /home/dsr/Documents/mad3d/New_Dataset20/houses3k/preprocess/test.txt /home/dsr/Documents/mad3d/New_Dataset20/houses3k/Raw_GLB/ /home/dsr/Documents/mad3d/New_Dataset20/houses3k/PCD/
+./isaaclab.sh -p scripts/mad3d/convert_mesh_to_pcd.py --filter_input [path_to_dataset_txt] [path_to_raw_mesh] [output_path]
+
+# remove occluded points
+# ex: ./isaaclab.sh -p scripts/mad3d/remove_non_visible_pcd.py --pointcloud /home/dsr/Documents/mad3d/New_Dataset20/houses3k/PCD/ --occ /home/dsr/Documents/mad3d/New_Dataset20/houses3k/preprocess/ --output /home/dsr/Documents/mad3d/New_Dataset20/houses3k/PCD_RF/  --mode houses3k
+./isaaclab.sh -p scripts/mad3d/remove_non_visible_pcd.py --pointcloud [raw_pcd_path] --occ [hollow_occ_path] --output [save_folder_path]   --mode [dataset]
+```
+
+### OmniObject3D (from scratch)
+```
+# download OmniObject3D raw data subset here (TBD)
+# rename raw data (if necessary)
+sh scripts/mad3d/rename_omni3d.sh
+
+# obj to usd and occ
+./isaaclab.sh -p scripts/mad3d/convert_mesh_to_usd_occ.py /home/dsr/Documents/OMNI3D/omni3d_raw_data/  /home/dsr/Documents/mad3d/New_Dataset20/omni3d/preprocess/
+
+# remove invalid 3D model
+./isaaclab.sh -p scripts/mad3d/remove_incomplete_data.py --root_directory /home/dsr/Documents/mad3d/New_Dataset20/omni3d/preprocess/ --mode omniobject3d
+
+# preprocess occ
+./isaaclab.sh -p scripts/mad3d/preprocess_occ.py /home/dsr/Documents/mad3d/New_Dataset20/omni3d/preprocess/
+
+# select n shapes for train and m shapes for test
+ ./isaaclab.sh -p scripts/mad3d/select_shapes.py --root_path /home/dsr/Documents/mad3d/New_Dataset20/omni3d/preprocess/ --num_shapes 200 --train_size 0 --test_size 200
+
+# generate raw pcd
+# ex: ./isaaclab.sh -p scripts/mad3d/convert_mesh_to_pcd.py --filter_input /home/dsr/Documents/mad3d/New_Dataset20/omni3d/preprocess/test.txt /home/dsr/Documents/OMNI3D/omni3d_raw_data/ /home/dsr/Documents/mad3d/New_Dataset20/omni3d/PCD/
+./isaaclab.sh -p scripts/mad3d/convert_mesh_to_pcd.py --filter_input [path_to_dataset_txt] [path_to_raw_mesh] [output_path]
+
+# remove occluded points
+# ex: ./isaaclab.sh -p scripts/mad3d/remove_non_visible_pcd.py --pointcloud /home/dsr/Documents/mad3d/New_Dataset20/omni3d/PCD/ --occ /home/dsr/Documents/mad3d/New_Dataset20/omni3d/preprocess/ --output /home/dsr/Documents/mad3d/New_Dataset20/omni3d/PCD_RF/  --mode omniobject3d
+./isaaclab.sh -p scripts/mad3d/remove_non_visible_pcd.py --pointcloud [raw_pcd_path] --occ [hollow_occ_path] --output [save_folder_path]   --mode [dataset]
 ```
