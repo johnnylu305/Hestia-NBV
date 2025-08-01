@@ -1,0 +1,20 @@
+# Reference: https://github.com/DLR-RM/rl-baselines3-zoo/blob/master/hyperparams/ppo.yml#L32
+seed: 42
+
+n_timesteps: !!float 5e6
+policy: 'MultiInputPolicyCus'
+n_steps: 64 # 32 for small vram 64 for large vram # this is n_step per env, larger num_env with smaller n_steps
+batch_size: 1024 # make it smaller than n_steps * num_env
+gae_lambda: 0.95
+gamma: 0.1 # TODO: try 0.01
+n_epochs: 10
+ent_coef: 0. # TODO: try 0.01
+learning_rate: !!float 3e-4
+clip_range: !!float 0.2
+policy_kwargs: "dict(
+    features_extractor_class=CustomCombinedExtractor,
+    log_std_init=0.0
+)"
+vf_coef: 0.5
+max_grad_norm: 0.5
+device: "cuda:0"
