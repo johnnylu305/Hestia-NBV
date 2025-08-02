@@ -118,6 +118,7 @@ sudo sysctl -w vm.max_map_count=1048576
 # train model
 # please change data_root in single_drone_env_cfg.py accordingly
 # since we remove and load a new scene for each episode, you may encounter errors such as "PhysX error: PxRigidActor::detachShape", which can be ignored...
+# for GPU with smaller VRAM, try adding "--headless", lowering "--num_envs", or reducing "n_steps" in "sb3_ppo_cfg.yaml"
 ./isaaclab.sh -p scripts/mad3d/sb3_single_drone.py --task=MAD3D-v0 --enable_cameras --num_envs 256
 ```
 
