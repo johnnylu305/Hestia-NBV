@@ -320,7 +320,7 @@ def run_simulator(sim, scene_entities, agent, hollow_occ_path, gt_pcd_path, cove
     for index in range(NUM_STEPS):
         print("")
         # simulate
-        for _ in range(16):
+        for _ in range(6):
             sim.step()
             camera.update(dt=sim_dt)
 
