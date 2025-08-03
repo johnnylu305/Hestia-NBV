@@ -7,7 +7,7 @@ Cheng-You Lu<sup>1</sup>, Zhuoli Zhuang<sup>1</sup>, Nguyen Thanh Trung Le<sup>1
 
 <p><sup>1</sup>University of Technology Sydney &nbsp;&nbsp;<sup>2</sup>Brown University &nbsp;&nbsp;
 
-### [Projectpage](TBD) · [Paper](TBD) · [Video](https://youtu.be/lgrqn8IMU2w)
+### [Projectpage](https://johnnylu305.github.io/hestia_web/) · [Paper](TBD) · [Video](https://youtu.be/lgrqn8IMU2w)
 
 </div>
 
