@@ -166,11 +166,11 @@ python3 scripts/mad3d/fbx_to_glb.py --root /home/dsr/Documents/mad3d/New_Dataset
 ./isaaclab.sh -p scripts/mad3d/occ_from_circular_path.py --input /home/dsr/Documents/mad3d/New_Dataset20/houses3k/preprocess/ --vis --enable_cameras
 
 # select n shapes for train and m shapes for test
-./isaaclab.sh -p scripts/mad3d/select_shapes.py --root_path /home/dsr/Documents/mad3d/New_Dataset/houses3k/preprocess/ --num_shapes 356 --train_size 256 --test_size 100
+./isaaclab.sh -p scripts/mad3d/select_shapes.py --root_path /home/dsr/Documents/mad3d/New_Dataset20/houses3k/preprocess/ --num_shapes 356 --train_size 256 --test_size 100
 
 # verification
 # the score is usually 0.99
-./isaaclab.sh -p scripts/mad3d/compare_hollow_to_circular.py --root /home/dsr/Documents/mad3d/New_Dataset/houses3k/preprocess/
+./isaaclab.sh -p scripts/mad3d/compare_hollow_to_circular.py --root /home/dsr/Documents/mad3d/New_Dataset20/houses3k/preprocess/
 
 # generate raw pcd
 # ex: ./isaaclab.sh -p scripts/mad3d/convert_mesh_to_pcd.py --filter_input /home/dsr/Documents/mad3d/New_Dataset20/houses3k/preprocess/test.txt /home/dsr/Documents/mad3d/New_Dataset20/houses3k/Raw_GLB/ /home/dsr/Documents/mad3d/New_Dataset20/houses3k/PCD/
