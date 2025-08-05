@@ -7,7 +7,7 @@ Cheng-You Lu<sup>1</sup>, Zhuoli Zhuang<sup>1</sup>, Nguyen Thanh Trung Le<sup>1
 
 <p><sup>1</sup>University of Technology Sydney &nbsp;&nbsp;<sup>2</sup>Brown University &nbsp;&nbsp;
 
-### [Projectpage](https://johnnylu305.github.io/hestia_web/) · [Paper](TBD) · [Video](https://youtu.be/lgrqn8IMU2w)
+### [Projectpage](https://johnnylu305.github.io/hestia_web/) · [Paper](https://arxiv.org/abs/2508.01014) · [Video](https://youtu.be/lgrqn8IMU2w)
 
 </div>
 
@@ -214,7 +214,15 @@ sh scripts/mad3d/rename_omni3d.sh
 If you find the codebase useful for your research, please consider citing:
 
 ```
-TBD
+@misc{lu2025hestiahierarchicalnextbestviewexploration,
+      title={Hestia: Hierarchical Next-Best-View Exploration for Systematic Intelligent Autonomous Data Collection}, 
+      author={Cheng-You Lu and Zhuoli Zhuang and Nguyen Thanh Trung Le and Da Xiao and Yu-Cheng Chang and Thomas Do and Srinath Sridhar and Chin-teng Lin},
+      year={2025},
+      eprint={2508.01014},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2508.01014}, 
+}
 ```
 
 Please also consider citing NVIDIA IsaacLab, Objaverse, Houses3K, and OmniObject3D:
