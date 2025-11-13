@@ -29,7 +29,7 @@ The codebase contains the training and testing code for Hestia in a simulation e
 
 ## Environment
 
-The original Hestia codebase was built on IsaacLab 4.2.0. Due to significant updates to IsaacLab since then, we have upgraded it to IsaacLab 2.1 and IsaacSim 4.5.0, using an environment with Ubuntu 22.04, Python 3.10, and an NVIDIA RTX A6000 GPU.
+The original Hestia codebase was built on IsaacSim 4.2.0. Due to significant updates to IsaacLab since then, we have upgraded it to IsaacLab 2.1 and IsaacSim 4.5.0, using an environment with Ubuntu 22.04, Python 3.10, and an NVIDIA RTX A6000 GPU.
 
 ### Install IsaacSim
 
