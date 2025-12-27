@@ -31,9 +31,9 @@ The original Hestia codebase was built on IsaacSim 4.2.0. Due to significant upd
 
 ## [Update 2025 Dec] Results (CR/CD) reproduced from the codebase
 
-I borrowed an A6000 machine from my colleague and reproduced the results using this codebase. The results look slightly unstable. For example, the (4, 4) and (4, −4) results show slight bias in this run. But, I don’t believe this is a bug in the new codebase. It’s more likely due to the inherent variability in RL training. I only trained a single model here, so if you’d like the best or most stable performance and visualization, I recommend retraining the model once or twice.
+I borrowed an A6000 machine from my colleague and reproduced the results using this codebase. The results look slightly unstable. For example, the (4, 4) and (4, −4) results show slight bias in this run. But I don’t believe this is a bug in the new codebase. It’s more likely due to the inherent variability in RL training. I only trained a single model here, so if you’d like the best or most stable performance and visualization, I recommend retraining the model once or twice.
 
-For benchmarking purposes, you’re welcome to use the paper results, the results shown here, or your own retrained results, as they generally do not deviate much from one another too much (most of the time, less than 1%). Please also note that the results may still differ slightly even when using the same model, likely due to the reparameterization trick used in the model.
+For benchmarking purposes, you’re welcome to use the paper results, the results shown here, or your own retrained results, as they generally do not deviate much from one another too much (most of the time, less than 1%). Please also note that the results may still differ slightly even when using the same model, likely due to the reparameterization trick used in the model. You can download the checkpoints and results [here](https://drive.google.com/drive/folders/1Clm18qthHiRzUkkCmW47g2IX72IaOHK_?usp=drive_link). Due to limited cloud storage space, I upload center position results.
 
 | Dataset | (0, 0) | (4, 4) | (4, -4) | (-4, 4) | (-4, -4) |
 |-----------|------------|---------------|------------|---------|----------|
