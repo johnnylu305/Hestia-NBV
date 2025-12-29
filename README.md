@@ -31,15 +31,15 @@ The original Hestia codebase was built on IsaacSim 4.2.0. Due to significant upd
 
 ## [Update 2025 Dec] Results (CR/CD) reproduced from the codebase
 
-I borrowed an A6000 machine from my colleague and reproduced the results using this codebase. The results look slightly unstable. For example, the (4, 4) and (4, −4) results show slight bias in this run. But I don’t believe this is a bug in the new codebase. It’s more likely due to the inherent variability in RL training. I only trained a single model here, so if you’d like the best or most stable performance and visualization, I recommend retraining the model once or twice.
+I borrowed an A6000 machine from a colleague and reproduced the results using this codebase. If your results look slightly different from these or from those reported in the paper, it’s most likely due to the inherent variability in RL training. I recommend retraining the model once or twice.
 
-For benchmarking purposes, you’re welcome to use the paper results, the results shown here, or your own retrained results, as they generally do not deviate much from one another too much (most of the time, less than 1%). Please also note that the results may still differ slightly even when using the same model, likely due to the reparameterization trick used in the model. You can download the checkpoints and results [here](https://drive.google.com/drive/folders/1Clm18qthHiRzUkkCmW47g2IX72IaOHK_?usp=drive_link). Due to limited cloud storage space, I upload center position results.
+For benchmarking purposes, you’re welcome to use the paper results, the results shown here, or your own retrained results, as they generally do not deviate much from one another too much (most of the time, less than 1%). Please also note that the results may still differ slightly even when using the same model, likely due to the reparameterization trick used in the model. You can download the checkpoints and results [here](). Due to limited cloud storage space, I uploaded the center position results.
 
 | Dataset | (0, 0) | (4, 4) | (4, -4) | (-4, 4) | (-4, -4) |
 |-----------|------------|---------------|------------|---------|----------|
-| Omni3D    | 96.9 / 4 | 95.7 / 7  | 95.6 / 7  | 96.7 / 4 | 96.7 / 5 |
-| Objaverse | 96.3 / 7 | 95.3 / 8  | 95.9 / 8  | 96.3 / 7 | 96.3 / 7 |
-| Houses3K  | 96.8 / 7 | 94.2 / 11 | 94.2 / 12 | 97.1 / 6 | 96.6 / 8 |
+| Omni3D    | 96.9 / 4 | 97.0 / 4  | 96.0 / 6  | 96.6 / 4 | 95.9 / 6 |
+| Objaverse | 96.5 / 7 | 96.9 / 7  | 96.2 / 8  | 96.9 / 7 | 95.5 / 8 |
+| Houses3K  | 97.5 / 6 | 97.5 / 6 | 97.1 / 7 | 97.0 / 6 | 96.3 / 8 |
 
 ### Install IsaacSim
 
