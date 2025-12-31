@@ -33,7 +33,7 @@ The original Hestia codebase was built on IsaacSim 4.2.0. Due to significant upd
 
 I borrowed an A6000 machine from a colleague and reproduced the results using this codebase. If your results look slightly different from these or from those reported in the paper, it’s most likely due to the inherent variability in RL training. I recommend retraining the model once or twice.
 
-For benchmarking purposes, you’re welcome to use the paper results, the results shown here, or your own retrained results, as they generally do not deviate much from one another too much (most of the time, less than 1%). Please also note that the results may still differ slightly even when using the same model, likely due to the reparameterization trick used in the model. You can download the checkpoints and results [here](). Due to limited cloud storage space, I uploaded the center position results.
+For benchmarking purposes, you’re welcome to use the paper results, the results shown here, or your own retrained results, as they generally do not deviate much from one another too much (most of the time, less than 1%). Please also note that the results may still differ slightly even when using the same model, likely due to the reparameterization trick used in the model. You can download the checkpoints and results [here](https://drive.google.com/file/d/1KhfJnbeH5jdWK5WHULgpl9oKax_LrgxR/view?usp=sharing). Due to limited cloud storage space, I uploaded the center position results.
 
 | Dataset | (0, 0) | (4, 4) | (4, -4) | (-4, 4) | (-4, -4) |
 |-----------|------------|---------------|------------|---------|----------|
