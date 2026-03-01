@@ -232,14 +232,13 @@ Please check this [repository](https://github.com/johnnylu305/Hestia-NBV-Demo).
 If you find the codebase useful for your research, please consider citing:
 
 ```
-@misc{lu2025hestiavoxelfaceawarehierarchicalnextbestview,
-      title={Hestia: Voxel-Face-Aware Hierarchical Next-Best-View Acquisition for Efficient 3D Reconstruction}, 
-      author={Cheng-You Lu and Zhuoli Zhuang and Nguyen Thanh Trung Le and Da Xiao and Yu-Cheng Chang and Thomas Do and Srinath Sridhar and Chin-teng Lin},
-      year={2025},
-      eprint={2508.01014},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2508.01014}, 
+@InProceedings{Lu_2026_WACV,
+    author    = {Lu, Cheng-You and Zhuang, Zhuoli and Le, Nguyen Thanh Trung and Xiao, Da and Chang, Yu-Cheng and Do, Thomas and Sridhar, Srinath and Lin, Chin-Teng},
+    title     = {Hestia: Voxel-Face-Aware Hierarchical Next-Best-View Acquisition for Efficient 3D Reconstruction},
+    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {March},
+    year      = {2026},
+    pages     = {5302-5312}
 }
 ```
 
